@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="music.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img class="logo" src="logo2.png" alt="">
+           
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">More</a></li>
+                    <li><a href="#">Tips</a></li>
+                </ul>
+           
+        </div>
+        <div class="center-right">
+            <h1 >Lp's<br>Rocklist</h1>
+        </div>
+        <div class="center-left">
+            <h2>Click Here To Listen</h2>
+            <img src="play.png" alt="" id="icons">
+          
+        </div>
+        
+    </div>
+
+        <audio id="audio" >
+        <source src="dance-monkey.mp3" type="audio/mp3">
+        </audio>
+    
+
+    <script>
+        var song =document.getElementById("audio");
+        var icon =document.getElementById("icons");
+
+        icon.onclick=function(){
+            if(song.paused){
+                song.play();
+                icon.src="pause.png";
+            }else{
+                song.pause();
+                icon.src="play.png";
+            }
+
+        }
+    </script>
+</body>
+</html>
